@@ -1,0 +1,57 @@
+.gameOver {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.GameOver--stats {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+  margin: 40px 0;
+}
+
+.GameOver--stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.GameOver--number {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.GameOver--label {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.GameOver--subtitle {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.GameOver--chain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 4px;
+  margin: 0;
+  max-height: 230px;
+  overflow-y: auto;
+  border: 1px solid #7869ce;
+  border-radius: 16px;
+}
+
+.GameOver--word {
+  padding: 6px 16px;
+  border: 2px solid #f2f0e9;
+  border-radius: 999px;
+  font-size: 1.1rem;
+}
