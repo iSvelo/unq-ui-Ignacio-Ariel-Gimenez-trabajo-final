@@ -1,0 +1,13 @@
+.GameWord {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.GameWord--Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}

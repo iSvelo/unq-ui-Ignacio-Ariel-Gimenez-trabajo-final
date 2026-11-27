@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ERRORS, isAlreadyUsed, respectsChain  } from "../../utils/gameRules"
 import { validateWord } from "../../services/wordService";
+import "./Game.css"
 
 const Game = ({ chain, setChain }) => {
     const [input, setInput] = useState("");
@@ -33,15 +34,21 @@ const Game = ({ chain, setChain }) => {
         setError(null);
     };
 
+    const lastWord = chain[chain.length - 1];
+
+    const placeholder = chain.length === 0
+        ? "Escribí una palabra para empezar"
+        : `Una palabra que empiece con "${lastWord.slice(-1).toUpperCase()}"`;
+
 
   return(
-    <div>
-        <p>{chain.join(" → ")}</p>
+    <div className="game">
+        <p className="game--chain">{chain.join(" → ")}</p>
         <form onSubmit={handleSubmit} >
-            <input type="text" placeholder="Escribí una palabra para empezar" value={input} onChange={(e) => setInput(e.target.value)}/>
-            <button type="submit">Enviar</button>
+            <input className="game--input" type="text" placeholder={placeholder} value={input} onChange={(e) => setInput(e.target.value)}/>
+            <button className="game--button" type="submit" >Enter</button>
         </form>
-        {error && <p>{error}</p>}
+        {error && <p className="game--error">{error}</p>}
     </div>
   )
 };

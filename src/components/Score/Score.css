@@ -1,0 +1,16 @@
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.score--number {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.score--label {
+  font-size: 1.5rem;
+}

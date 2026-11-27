@@ -19,3 +19,6 @@ export const respectsChain = (word, chain) => {
     const last = comparable(chain[chain.length - 1]);
     return comparable(word)[0] === last[last.length - 1];
 };
+
+export const calculateScore = (chain) =>
+    chain.reduce((total, word) => total + word.length, 0);

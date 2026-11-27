@@ -1,8 +1,15 @@
-const Score = () => {
+import "./Score.css"
+
+const Score = ({score}) => {
   return (
-    <span>
-        puntaje actual = x O BIEN Puntaje maximo anterior?
-    </span>
+    <div className="score">
+      <span className="score--number">
+        {score}
+      </span>
+      <span className="score--label">
+        Puntaje
+      </span>
+    </div>
   )
 };
 export default Score;
